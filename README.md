@@ -2,7 +2,7 @@
                                                            
 A client of my company wants to run their e-commerce application with the whole infrastructure on AWS. Basically, we need to build a multi-tier architecture that is used in a client-server application such as a web application that has the frontend, the backend and the database. This architecture is a shift from the monolithic way of building an application where the frontend, the backend and the database  are all sitting in one place. With that, we need to take these into consideration. 
 
-Security: We want to design an infrastructure that is highly secured and protected from the prying eyes of bad actors. As much as possible, we want to avoid exposing our interactions within the application over the internet. This simply means that the application will communicate within themselves with a private IP. The backend and the database tier will also be in the private subnet because we do not want to expose them over the internet. We will set up the Bastion host for remote SSH and a NAT gateway for our private subnets to access the internet. 
+Security: We want to design an infrastructure that is highly secured and protected from the prying eyes of bad actors. As much as possible, we want to avoid exposing our interactions within the application over the internet. This simply means that the application will communicate within themselves with a private IP. The backend and the database tier will also be in the private subnet because we do not want to expose them over the internet. Under the Security Group, we only need to allow ports that the application needs. For example, we need to allow HTTP port 80 and or HTTPS port 443 on our application load balancer. We will set up Bastion host for remote SSH and a NAT gateway for our private subnets to access the internet. 
 
 Scalability & Fault Tolerant: Each tier of this architecture can be scale horizontally or vertically to support the hike in traffic and request demand coming to it. This can easily be done by adding an Auto Scaling Group and a load balancing with a health check. For instance, assuming we have two EC2 instances serving our backend application and each of the EC2 instances is working at 80% CPU utilization, we can easily scale the backend tier by adding more EC2 instances to it so that the load can be distributed. We can also automatically reduce the number of the EC2 instances when the load is less. This makes  our infrastructure to comfortably adapt to any unexpected change both in traffic and fault.
 
@@ -30,7 +30,7 @@ To make sure we can recreate all these without manual effort, we will use terraf
 
 
 
-![My Blank diagram - Page 1 (1)](https://user-images.githubusercontent.com/94230928/149515221-5129ed8a-81bb-4c38-a0d7-a933bfcce8ab.png)
+![My Blank diagram - Page ](https://user-images.githubusercontent.com/94230928/149515221-5129ed8a-81bb-4c38-a0d7-a933bfcce8ab.png)
 
 
 
