@@ -29,7 +29,7 @@ To make sure we can recreate all these without manual effort, we will use terraf
 
 
 
-![My Blank diagram - Page 1 (3)](https://user-images.githubusercontent.com/94230928/150430772-4e2bba47-5d3d-4a24-b02e-635cf9412c00.png)
+[My Blank diagram - Page 1 (3)](https://user-images.githubusercontent.com/94230928/150430772-4e2bba47-5d3d-4a24-b02e-635cf9412c00.png)
 
 
 
